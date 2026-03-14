@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** wruhgpr903p-mmpyhwxp
+**Document ID:** y15krm4vnb-mmq04w14
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,40 +10,45 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Elixir: Enum Pipeline
+## PHP: JSON Response
 
-Elixir pipeline that filters even numbers and inspects the result.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Kotlin: Data Class Copy
+## C++: Transform Vector
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+C++ transforms a vector in-place and prints the results.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
 
-## SQL: Group and Order
+## Rust: Read Lines
 
-SQL query that groups by name and orders by count descending.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
