@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ls0iba0wt-mmwm3uks
+**Document ID:** j1b5i362fb-mmyuuzan
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,13 @@ echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Swift: Map and Filter
+## Bash: Count Files
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Counts files in the current directory using common shell tools.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
