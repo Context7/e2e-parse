@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 16galuln65q-mn60e6am
+**Document ID:** 17ork1qwup9-mn60gs85
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,47 +10,35 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## Julia: Comprehension
 
-Counts files in the current directory using common shell tools.
+Julia list comprehension generating cubes of a range.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## Rust: Read Lines
+## JavaScript: Sum Array Elements
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## Go: HTTP Server
+## Haskell: Filter and Map
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
