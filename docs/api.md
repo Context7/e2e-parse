@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** earyq1kb226-mn7yfqbx
+**Document ID:** pesedf3qcf-mn7zpu7p
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -24,14 +24,15 @@ fun main(){
 ```
 
 
-## Julia: Comprehension
+## SQL: Group and Order
 
-Julia list comprehension generating cubes of a range.
+SQL query that groups by name and orders by count descending.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
