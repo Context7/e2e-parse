@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 1lulk141wvb-mn7zpu7p
+**Document ID:** ixy8wm94zsd-mn9l8zsw
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,32 +21,32 @@ print(evensDoubled)
 ```
 
 
-## Go: HTTP Server
+## Ruby: Word Count
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
-## Haskell: Filter and Map
+## C#: LINQ Query
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
