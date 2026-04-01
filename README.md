@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** s7rz4jbyghn-mnftlybg
+**Document ID:** tr03dqddqil-mngkqfj2
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,25 +10,13 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## JavaScript: Sum Array Elements
+## Bash: Count Files
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts files in the current directory using common shell tools.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
-```
-
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
@@ -45,6 +33,16 @@ int main(){
   for (auto n: v) cout<<n<<" ";
   return 0;
 }
+```
+
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
