@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** uwdt2trlhd9-mo7ngdem
+**Document ID:** odu4mbd1a9-mocpynme
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,33 +21,25 @@ console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Go: HTTP Server
+## Elixir: Enum Pipeline
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## PHP: JSON Response
+## JavaScript: Sum Array Elements
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
