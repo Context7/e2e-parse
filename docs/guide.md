@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** joaak9e18c-mq51uyol
+**Document ID:** eyvzrchhi4t-mq525cjn
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,24 +22,28 @@ puts counts
 ```
 
 
-## Bash: Count Files
+## Julia: Comprehension
 
-Counts files in the current directory using common shell tools.
+Julia list comprehension generating cubes of a range.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## TypeScript: Typed User Model
+## Kotlin: Data Class Copy
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
