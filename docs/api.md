@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** noseype3fm-mq7km1u5
+**Document ID:** vuqaecehlwf-mq7vbvvo
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -20,14 +20,18 @@ echo "Files: $FILES"
 ```
 
 
-## Julia: Comprehension
+## Rust: Read Lines
 
-Julia list comprehension generating cubes of a range.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
