@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** mct5ccfasgc-mqj05l43
+**Document ID:** l5qskmmsm3r-mqkfmf65
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,14 +25,13 @@ object Main {
 ```
 
 
-## TypeScript: Typed User Model
+## Bash: Count Files
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Counts files in the current directory using common shell tools.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
