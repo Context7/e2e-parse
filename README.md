@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 17p86vnmjyz-mqq53qyv
+**Document ID:** ofl4a03khe-mqrkmcxv
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,46 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## PHP: JSON Response
 
-Counts files in the current directory using common shell tools.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## R: Vector Arithmetic
+## Kotlin: Data Class Copy
 
-Simple R vector example computing squares of a sequence.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
-## C++: Transform Vector
+## Go: HTTP Server
 
-C++ transforms a vector in-place and prints the results.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
