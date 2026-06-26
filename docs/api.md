@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** zr8n8bw3tp-mqt01987
+**Document ID:** wcmq6gxnhva-mqufl9p0
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,15 @@ print(evensDoubled)
 ```
 
 
-## R: Vector Arithmetic
+## Ruby: Word Count
 
-Simple R vector example computing squares of a sequence.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
