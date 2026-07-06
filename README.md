@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 8dr1z1p1xk-mr7adhi3
+**Document ID:** v9xqe4w9zz-mr8pyl8z
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,33 +22,35 @@ puts counts
 ```
 
 
-## Rust: Read Lines
+## C#: LINQ Query
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
 ```
 
 
-## Python: Fibonacci Generator
+## Scala: List Pipeline
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
