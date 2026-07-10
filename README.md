@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** j40s0tv8vj-mrd0ctaz
+**Document ID:** p86uugvolx-mrefhxpp
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,31 +21,32 @@ print(squares)
 ```
 
 
-## Rust: Read Lines
+## PHP: JSON Response
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Scala: List Pipeline
+## Java: Stream Map/Filter
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
   }
 }
 ```
