@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ws5npdf1ahj-mripiwc6
+**Document ID:** ctlgfoj27g-mrk4id0j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,44 +10,43 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Go: HTTP Server
+## Rust: Read Lines
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
 
-## SQL: Group and Order
+## Python: Fibonacci Generator
 
-SQL query that groups by name and orders by count descending.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## Bash: Count Files
+## Haskell: Filter and Map
 
-Counts files in the current directory using common shell tools.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 

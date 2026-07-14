@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 4k85edysfxx-mripiwcf
+**Document ID:** umx8qx3x9ah-mrk4id0m
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,27 +10,32 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Haskell: Filter and Map
+## Julia: Comprehension
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Julia list comprehension generating cubes of a range.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## Scala: List Pipeline
+## Go: HTTP Server
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
