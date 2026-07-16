@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** j3ya5vtihhm-mrljyptq
+**Document ID:** sfpd0n013qo-mrmzf7i4
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,42 +10,36 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Julia: Comprehension
+## JavaScript: Sum Array Elements
 
-Julia list comprehension generating cubes of a range.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## C++: Transform Vector
+## Swift: Map and Filter
 
-C++ transforms a vector in-place and prints the results.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
-## SQL: Group and Order
+## PHP: JSON Response
 
-SQL query that groups by name and orders by count descending.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
