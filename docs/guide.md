@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** erycrtq8cib-mrwzpbxw
+**Document ID:** ak64kmkc03h-mryf12om
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -20,28 +20,35 @@ main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## JavaScript: Sum Array Elements
+## Dart: Map Over List
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Dart example mapping over a list and printing the result.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## Rust: Read Lines
+## Java: Stream Map/Filter
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
 }
 ```
 
