@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** aj1zpctmeju-ms5k6r4o
+**Document ID:** j4uvf1v15jm-ms6zkfz8
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,36 +10,43 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## R: Vector Arithmetic
 
-Counts files in the current directory using common shell tools.
+Simple R vector example computing squares of a sequence.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Julia: Comprehension
+## Kotlin: Data Class Copy
 
-Julia list comprehension generating cubes of a range.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
-## Ruby: Word Count
+## Python: Fibonacci Generator
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
