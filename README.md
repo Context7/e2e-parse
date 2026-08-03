@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 5ij37atx1df-msba848q
+**Document ID:** jxsemsdo3l-mscpqzfv
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,23 +21,26 @@ print(squares)
 ```
 
 
-## Bash: Count Files
+## TypeScript: Typed User Model
 
-Counts files in the current directory using common shell tools.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Haskell: Filter and Map
+## SQL: Group and Order
 
-A minimal Haskell example filtering odd numbers and squaring them.
+SQL query that groups by name and orders by count descending.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
