@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 9hv8r0ch36i-mseisjvu
+**Document ID:** m9t0tvvtds-msev1u9a
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -38,21 +38,16 @@ void main() {
 ```
 
 
-## Go: HTTP Server
+## Kotlin: Data Class Copy
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
 ```
 
