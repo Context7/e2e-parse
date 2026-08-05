@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** mnm8aosd2l-msev1u96
+**Document ID:** 8etcfalzr3r-msfk7uml
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,36 +10,47 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Julia: Comprehension
+## C++: Transform Vector
 
-Julia list comprehension generating cubes of a range.
+C++ transforms a vector in-place and prints the results.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
-## PHP: JSON Response
+## C#: LINQ Query
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
-## Elixir: Enum Pipeline
+## R: Vector Arithmetic
 
-Elixir pipeline that filters even numbers and inspects the result.
+Simple R vector example computing squares of a sequence.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
