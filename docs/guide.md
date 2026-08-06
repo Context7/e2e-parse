@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** kaluw3d6ncb-msfk7umo
+**Document ID:** k42f3f39pve-msgzp2da
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,40 +10,46 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## C#: LINQ Query
 
-Counts files in the current directory using common shell tools.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
-```
-
-
-## SQL: Group and Order
-
-SQL query that groups by name and orders by count descending.
-
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
-```
-
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
+```
+
+
+## TypeScript: Typed User Model
+
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```
+
+
+## Python: Fibonacci Generator
+
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
