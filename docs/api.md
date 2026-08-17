@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 2qdo5rm0fnd-msv8kqne
+**Document ID:** lyznqceipt-mswo02j6
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,19 +21,14 @@ print(squares)
 ```
 
 
-## C++: Transform Vector
+## PHP: JSON Response
 
-C++ transforms a vector in-place and prints the results.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
