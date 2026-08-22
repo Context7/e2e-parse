@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ya20phia6bb-mt2dtzla
+**Document ID:** lnxyv8wb4cq-mt3t4jbc
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,26 +25,29 @@ fn main(){
 ```
 
 
-## Elixir: Enum Pipeline
+## Scala: List Pipeline
 
-Elixir pipeline that filters even numbers and inspects the result.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-## Ruby: Word Count
+## JavaScript: Sum Array Elements
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
